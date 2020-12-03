@@ -1,0 +1,159 @@
+{
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "sh": "http://www.w3.org/ns/shacl#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "schema": "http://schema.org/",
+        "sh:targetClass": {
+            "@id": "sh:targetClass",
+            "@type": "@id"
+        },
+        "sh:property": {
+            "@id": "sh:property"
+        },
+        "sh:path": {
+            "@id": "sh:path",
+            "@type": "@id"
+        },
+        "sh:datatype": {
+            "@id": "sh:datatype",
+            "@type": "@id"
+        },
+        "sh:node": {
+            "@id": "sh:node"
+        },
+        "sh:class": {
+            "@id": "sh:class",
+            "@type": "@id"
+        },
+        "sh:or": {
+            "@id": "sh:or",
+            "@container": "@list"
+        },
+        "sh:in": {
+            "@id": "sh:in",
+            "@container": "@list"
+        },
+        "sh:languageIn": {
+            "@id": "sh:languageIn",
+            "@container": "@list"
+        },
+        "sh:equals": {
+            "@id": "sh:equals",
+            "@type": "@id"
+        },
+        "sh:disjoint": {
+            "@id": "sh:disjoint",
+            "@type": "@id"
+        },
+        "sh:lessThan": {
+            "@id": "sh:lessThan",
+            "@type": "@id"
+        },
+        "sh:lessThanOrEquals": {
+            "@id": "sh:lessThanOrEquals",
+            "@type": "@id"
+        },
+        "ds": "http://vocab.sti2.at/ds/",
+        "ds:usedVocabularies": {
+            "@id": "ds:usedVocabularies",
+            "@type": "@id"
+        }
+    },
+    "@graph": [
+        {
+            "@id": "_:RootNode",
+            "@type": [
+                "sh:NodeShape",
+                "schema:CreativeWork"
+            ],
+            "schema:author": {
+                "@type": "schema:Person",
+                "schema:name": "oleksandra",
+                "schema:memberOf": {
+                    "@type": "schema:Organization",
+                    "schema:name": "STI Innsbruck"
+                }
+            },
+            "schema:name": "GeoShape",
+            "schema:schemaVersion": "https://schema.org/version/3.4/",
+            "schema:version": 1.02,
+            "sh:property": [
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:maxCount": 1,
+                    "sh:minCount": 1,
+                    "sh:or": [
+                        {
+                            "sh:datatype": "xsd:string"
+                        }
+                    ],
+                    "sh:order": 0,
+                    "sh:path": "schema:name"
+                },
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:maxCount": 1,
+                    "sh:or": [
+                        {
+                            "sh:datatype": "xsd:string"
+                        }
+                    ],
+                    "sh:order": 1,
+                    "sh:path": "schema:box"
+                },
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:maxCount": 1,
+                    "sh:or": [
+                        {
+                            "sh:datatype": "xsd:string"
+                        }
+                    ],
+                    "sh:order": 2,
+                    "sh:path": "schema:circle"
+                },
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:maxCount": 1,
+                    "sh:or": [
+                        {
+                            "sh:datatype": "xsd:string"
+                        }
+                    ],
+                    "sh:order": 3,
+                    "sh:path": "schema:line"
+                },
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:maxCount": 1,
+                    "sh:or": [
+                        {
+                            "sh:datatype": "xsd:string"
+                        }
+                    ],
+                    "sh:order": 4,
+                    "sh:path": "schema:polygon"
+                },
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:maxCount": 1,
+                    "sh:or": [
+                        {
+                            "sh:datatype": "xsd:string"
+                        },
+                        {
+                            "sh:datatype": "xsd:double"
+                        }
+                    ],
+                    "sh:order": 5,
+                    "sh:path": "schema:elevation"
+                }
+            ],
+            "sh:targetClass": "schema:GeoShape",
+            "schema:description": "GeoShape Domain Specification is a  domain-specific pattern for annotation of the geographic shape of a place, such as geographical lines, polygons circles areas."
+        }
+    ],
+    "@id": "https://semantify.it/ds/GmNoiZrbN"
+}

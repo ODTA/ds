@@ -1,0 +1,237 @@
+{
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "sh": "http://www.w3.org/ns/shacl#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "schema": "http://schema.org/",
+        "sh:targetClass": {
+            "@id": "sh:targetClass",
+            "@type": "@id"
+        },
+        "sh:property": {
+            "@id": "sh:property"
+        },
+        "sh:path": {
+            "@id": "sh:path",
+            "@type": "@id"
+        },
+        "sh:datatype": {
+            "@id": "sh:datatype",
+            "@type": "@id"
+        },
+        "sh:node": {
+            "@id": "sh:node"
+        },
+        "sh:class": {
+            "@id": "sh:class",
+            "@type": "@id"
+        },
+        "sh:or": {
+            "@id": "sh:or",
+            "@container": "@list"
+        },
+        "sh:in": {
+            "@id": "sh:in",
+            "@container": "@list"
+        },
+        "sh:languageIn": {
+            "@id": "sh:languageIn",
+            "@container": "@list"
+        },
+        "sh:equals": {
+            "@id": "sh:equals",
+            "@type": "@id"
+        },
+        "sh:disjoint": {
+            "@id": "sh:disjoint",
+            "@type": "@id"
+        },
+        "sh:lessThan": {
+            "@id": "sh:lessThan",
+            "@type": "@id"
+        },
+        "sh:lessThanOrEquals": {
+            "@id": "sh:lessThanOrEquals",
+            "@type": "@id"
+        },
+        "ds": "http://vocab.sti2.at/ds/",
+        "ds:usedVocabularies": {
+            "@id": "ds:usedVocabularies",
+            "@type": "@id"
+        }
+    },
+    "@graph": [
+        {
+            "@id": "_:RootNode",
+            "@type": [
+                "sh:NodeShape",
+                "schema:CreativeWork"
+            ],
+            "schema:author": {
+                "@type": "schema:Person",
+                "schema:name": "oleksandra",
+                "schema:memberOf": {
+                    "@type": "schema:Organization",
+                    "schema:name": "STI Innsbruck"
+                }
+            },
+            "schema:description": "ContactPoint Domain Specification is a domain-specific pattern for annotating contact departments using schema.org vocabulary. ",
+            "schema:name": "ContactPoint",
+            "schema:schemaVersion": "https://schema.org/version/6.0/",
+            "schema:version": 1.15,
+            "sh:property": [
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:maxCount": 1,
+                    "sh:minCount": 1,
+                    "sh:or": [
+                        {
+                            "sh:datatype": "xsd:string"
+                        }
+                    ],
+                    "sh:order": 0,
+                    "sh:path": "schema:name",
+                    "rdfs:comment": "This property is used to specify the name of a contact point."
+                },
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:maxCount": 1,
+                    "sh:or": [
+                        {
+                            "sh:datatype": "xsd:string"
+                        }
+                    ],
+                    "sh:order": 1,
+                    "sh:path": "schema:description",
+                    "sh:minCount": 0,
+                    "rdfs:comment": "This property specifies the description of a contact point if it's given."
+                },
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:maxCount": 1,
+                    "sh:minCount": 1,
+                    "sh:or": [
+                        {
+                            "sh:datatype": "xsd:string"
+                        }
+                    ],
+                    "sh:order": 2,
+                    "sh:path": "schema:contactType",
+                    "rdfs:comment": "The value of this property should be choosen from the following list of contact types: \"customer support\", \"technical support\", \"billing support\", \"bill payment\", \"sales\", \"reservations\",\"credit card support\", \"emergency\", \"baggage tracking\", \"roadside assistance\",\"package tracking\"."
+                },
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:minCount": 1,
+                    "sh:or": [
+                        {
+                            "sh:datatype": "xsd:string"
+                        }
+                    ],
+                    "sh:order": 3,
+                    "sh:path": "schema:telephone",
+                    "sh:maxCount": 1,
+                    "rdfs:comment": "This property specifies the telephone number of a contact point. The property value is required as the main means of communication. "
+                },
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:maxCount": 1,
+                    "sh:or": [
+                        {
+                            "sh:datatype": "xsd:string"
+                        }
+                    ],
+                    "sh:order": 4,
+                    "sh:path": "schema:faxNumber",
+                    "sh:minCount": 0,
+                    "rdfs:comment": "This property specifies the fax number of a contact point if it's given."
+                },
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:maxCount": 1,
+                    "sh:minCount": 1,
+                    "sh:or": [
+                        {
+                            "sh:datatype": "xsd:string"
+                        }
+                    ],
+                    "sh:order": 5,
+                    "sh:path": "schema:email",
+                    "rdfs:comment": "This property specifies the email of a contact point. The property value is required as a common means of communication. "
+                },
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:maxCount": 1,
+                    "sh:minCount": 0,
+                    "sh:or": [
+                        {
+                            "sh:datatype": "xsd:anyURI"
+                        }
+                    ],
+                    "sh:order": 6,
+                    "sh:path": "schema:url",
+                    "rdfs:comment": "This property specifies the URL of a contact point if it has one."
+                },
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:or": [
+                        {
+                            "sh:class": "schema:Language",
+                            "sh:node": {
+                                "@type": "sh:NodeShape",
+                                "sh:property": [
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ],
+                                        "sh:order": 0,
+                                        "sh:path": "schema:name",
+                                        "rdfs:comment": "This property specifies the full name of a language, e.g. English."
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ],
+                                        "sh:order": 1,
+                                        "sh:path": "schema:alternateName",
+                                        "sh:minCount": 0,
+                                        "rdfs:comment": "This property specifies the formal language code tag expressed in BCP 47, e.g. EN."
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "sh:datatype": "xsd:string"
+                        }
+                    ],
+                    "sh:order": 7,
+                    "sh:path": "schema:availableLanguage"
+                },
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:minCount": 0,
+                    "sh:order": 8,
+                    "sh:path": "schema:sameAs",
+                    "sh:or": [
+                        {
+                            "sh:datatype": "xsd:anyURI"
+                        }
+                    ],
+                    "rdfs:comment": "Contact references represented in other sources or social media can be  included, e.g. Facebook, Twitter."
+                }
+            ],
+            "sh:targetClass": "schema:ContactPoint",
+            "ds:usedVocabularies": []
+        }
+    ],
+    "@id": "https://semantify.it/ds/QqUhzElZu"
+}

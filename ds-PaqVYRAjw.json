@@ -1,0 +1,250 @@
+{
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "sh": "http://www.w3.org/ns/shacl#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "schema": "http://schema.org/",
+        "ds": "http://vocab.sti2.at/ds/",
+        "ds:usedVocabularies": {
+            "@id": "ds:usedVocabularies",
+            "@type": "@id"
+        },
+        "sh:targetClass": {
+            "@id": "sh:targetClass",
+            "@type": "@id"
+        },
+        "sh:property": {
+            "@id": "sh:property"
+        },
+        "sh:path": {
+            "@id": "sh:path",
+            "@type": "@id"
+        },
+        "sh:datatype": {
+            "@id": "sh:datatype",
+            "@type": "@id"
+        },
+        "sh:node": {
+            "@id": "sh:node"
+        },
+        "sh:class": {
+            "@id": "sh:class",
+            "@type": "@id"
+        },
+        "sh:or": {
+            "@id": "sh:or",
+            "@container": "@list"
+        },
+        "sh:in": {
+            "@id": "sh:in",
+            "@container": "@list"
+        },
+        "sh:languageIn": {
+            "@id": "sh:languageIn",
+            "@container": "@list"
+        },
+        "sh:equals": {
+            "@id": "sh:equals",
+            "@type": "@id"
+        },
+        "sh:disjoint": {
+            "@id": "sh:disjoint",
+            "@type": "@id"
+        },
+        "sh:lessThan": {
+            "@id": "sh:lessThan",
+            "@type": "@id"
+        },
+        "sh:lessThanOrEquals": {
+            "@id": "sh:lessThanOrEquals",
+            "@type": "@id"
+        },
+        "n": "https://vocab.sti2.at/acco/"
+    },
+    "@graph": [
+        {
+            "@id": "_:RootNode",
+            "@type": [
+                "sh:NodeShape",
+                "schema:CreativeWork"
+            ],
+            "schema:author": {
+                "@type": "schema:Person",
+                "schema:name": "umut",
+                "schema:memberOf": {
+                    "@type": "schema:Organization",
+                    "schema:name": "STI Innsbruck"
+                }
+            },
+            "schema:description": "a DS pattern for lodgingbusinesses",
+            "schema:name": "Hospitality DS",
+            "schema:schemaVersion": "https://schema.org/version/10.0/",
+            "schema:version": 2,
+            "ds:usedVocabularies": [
+                "https://semantify.it/voc/8lS_FMTRq"
+            ],
+            "sh:property": [
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:minCount": 1,
+                    "sh:order": 0,
+                    "sh:path": "schema:name",
+                    "sh:or": [
+                        {
+                            "sh:datatype": "xsd:string"
+                        }
+                    ]
+                },
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:minCount": 1,
+                    "sh:order": 1,
+                    "sh:path": "schema:checkinTime",
+                    "sh:or": [
+                        {
+                            "sh:datatype": "xsd:dateTime"
+                        }
+                    ]
+                },
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:minCount": 1,
+                    "sh:order": 2,
+                    "sh:path": "schema:checkoutTime",
+                    "sh:or": [
+                        {
+                            "sh:datatype": "xsd:dateTime"
+                        }
+                    ]
+                },
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:minCount": 1,
+                    "sh:order": 3,
+                    "sh:path": "schema:containsPlace",
+                    "sh:or": [
+                        {
+                            "sh:class": [
+                                "schema:HotelRoom",
+                                "schema:Product"
+                            ],
+                            "sh:node": {
+                                "@type": "sh:NodeShape",
+                                "sh:property": [
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:minCount": 1,
+                                        "sh:order": 0,
+                                        "sh:path": "schema:offers",
+                                        "sh:or": [
+                                            {
+                                                "sh:class": "schema:Offer",
+                                                "sh:node": {
+                                                    "@type": "sh:NodeShape",
+                                                    "sh:property": [
+                                                        {
+                                                            "@type": "sh:PropertyShape",
+                                                            "sh:minCount": 1,
+                                                            "sh:order": 0,
+                                                            "sh:path": "schema:name",
+                                                            "sh:or": [
+                                                                {
+                                                                    "sh:datatype": "xsd:string"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "sh:class": "n:Sauna",
+                            "sh:node": {
+                                "@type": "sh:NodeShape",
+                                "sh:property": []
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:minCount": 1,
+                    "sh:order": 4,
+                    "sh:path": "schema:location",
+                    "sh:or": [
+                        {
+                            "sh:class": "schema:PostalAddress",
+                            "sh:node": {
+                                "@type": "sh:NodeShape",
+                                "sh:property": [
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:minCount": 1,
+                                        "sh:order": 0,
+                                        "sh:path": "schema:addressLocality",
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:minCount": 1,
+                                        "sh:order": 1,
+                                        "sh:path": "schema:addressCountry",
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:minCount": 1,
+                                        "sh:order": 2,
+                                        "sh:path": "schema:addressRegion",
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:minCount": 1,
+                                        "sh:order": 3,
+                                        "sh:path": "schema:streetAddress",
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:minCount": 0,
+                    "sh:order": 5,
+                    "sh:path": "n:totalNumberOfBeds",
+                    "sh:or": [
+                        {
+                            "sh:datatype": "xsd:double"
+                        }
+                    ]
+                }
+            ],
+            "sh:targetClass": "schema:LodgingBusiness"
+        }
+    ],
+    "@id": "https://semantify.it/ds/PaqVYRAjw"
+}

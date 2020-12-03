@@ -1,0 +1,1636 @@
+{
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "sh": "http://www.w3.org/ns/shacl#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "schema": "http://schema.org/",
+        "sh:targetClass": {
+            "@id": "sh:targetClass",
+            "@type": "@id"
+        },
+        "sh:property": {
+            "@id": "sh:property"
+        },
+        "sh:path": {
+            "@id": "sh:path",
+            "@type": "@id"
+        },
+        "sh:datatype": {
+            "@id": "sh:datatype",
+            "@type": "@id"
+        },
+        "sh:node": {
+            "@id": "sh:node"
+        },
+        "sh:class": {
+            "@id": "sh:class",
+            "@type": "@id"
+        },
+        "sh:or": {
+            "@id": "sh:or",
+            "@container": "@list"
+        },
+        "sh:in": {
+            "@id": "sh:in",
+            "@container": "@list"
+        },
+        "sh:languageIn": {
+            "@id": "sh:languageIn",
+            "@container": "@list"
+        },
+        "sh:equals": {
+            "@id": "sh:equals",
+            "@type": "@id"
+        },
+        "sh:disjoint": {
+            "@id": "sh:disjoint",
+            "@type": "@id"
+        },
+        "sh:lessThan": {
+            "@id": "sh:lessThan",
+            "@type": "@id"
+        },
+        "sh:lessThanOrEquals": {
+            "@id": "sh:lessThanOrEquals",
+            "@type": "@id"
+        },
+        "ds": "http://vocab.sti2.at/ds/",
+        "ds:usedVocabularies": {
+            "@id": "ds:usedVocabularies",
+            "@type": "@id"
+        }
+    },
+    "@graph": [
+        {
+            "@id": "_:RootNode",
+            "@type": [
+                "sh:NodeShape",
+                "schema:CreativeWork"
+            ],
+            "schema:author": {
+                "@type": "schema:Person",
+                "schema:name": "oleksandra",
+                "schema:memberOf": {
+                    "@type": "schema:Organization",
+                    "schema:name": "STI Innsbruck"
+                }
+            },
+            "schema:description": "BlogPosting Domain Specification is a  domain-specific pattern for annotating blogs using schema.org vocabulary. ",
+            "schema:name": "BlogPosting",
+            "schema:schemaVersion": "https://schema.org/version/6.0/",
+            "schema:version": 1.03,
+            "sh:property": [
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:maxCount": 1,
+                    "sh:minCount": 1,
+                    "sh:or": [
+                        {
+                            "sh:class": "schema:Thing",
+                            "sh:node": {
+                                "@type": "sh:NodeShape",
+                                "sh:property": [
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ],
+                                        "sh:order": 0,
+                                        "sh:path": "schema:name"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:anyURI"
+                                            }
+                                        ],
+                                        "sh:order": 1,
+                                        "sh:path": "schema:url"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "sh:class": "schema:Person",
+                            "sh:node": {
+                                "@type": "sh:NodeShape",
+                                "sh:property": [
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ],
+                                        "sh:order": 0,
+                                        "sh:path": "schema:name"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:anyURI"
+                                            }
+                                        ],
+                                        "sh:order": 1,
+                                        "sh:path": "schema:url"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "sh:class": "schema:CreativeWork",
+                            "sh:node": {
+                                "@type": "sh:NodeShape",
+                                "sh:property": [
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ],
+                                        "sh:order": 0,
+                                        "sh:path": "schema:name"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:anyURI"
+                                            }
+                                        ],
+                                        "sh:order": 1,
+                                        "sh:path": "schema:url"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "sh:class": "schema:Organization",
+                            "sh:node": {
+                                "@type": "sh:NodeShape",
+                                "sh:property": [
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ],
+                                        "sh:order": 0,
+                                        "sh:path": "schema:name"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:anyURI"
+                                            }
+                                        ],
+                                        "sh:order": 1,
+                                        "sh:path": "schema:url"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "sh:class": "schema:Place",
+                            "sh:node": {
+                                "@type": "sh:NodeShape",
+                                "sh:property": [
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ],
+                                        "sh:order": 0,
+                                        "sh:path": "schema:name"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:anyURI"
+                                            }
+                                        ],
+                                        "sh:order": 1,
+                                        "sh:path": "schema:url"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "sh:class": "schema:Event",
+                            "sh:node": {
+                                "@type": "sh:NodeShape",
+                                "sh:property": [
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ],
+                                        "sh:order": 0,
+                                        "sh:path": "schema:name"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:anyURI"
+                                            }
+                                        ],
+                                        "sh:order": 1,
+                                        "sh:path": "schema:url"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "sh:class": "schema:Product",
+                            "sh:node": {
+                                "@type": "sh:NodeShape",
+                                "sh:property": [
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ],
+                                        "sh:order": 0,
+                                        "sh:path": "schema:name"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:anyURI"
+                                            }
+                                        ],
+                                        "sh:order": 1,
+                                        "sh:path": "schema:url"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "sh:order": 0,
+                    "sh:path": "schema:about"
+                },
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:maxCount": 1,
+                    "sh:minCount": 1,
+                    "sh:or": [
+                        {
+                            "sh:datatype": "xsd:string"
+                        }
+                    ],
+                    "sh:order": 1,
+                    "sh:path": "schema:articleBody"
+                },
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:maxCount": 1,
+                    "sh:minCount": 1,
+                    "sh:or": [
+                        {
+                            "sh:class": "schema:Organization",
+                            "sh:node": {
+                                "@type": "sh:NodeShape",
+                                "sh:property": [
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ],
+                                        "sh:order": 0,
+                                        "sh:path": "schema:description"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:anyURI"
+                                            }
+                                        ],
+                                        "sh:order": 1,
+                                        "sh:path": "schema:image"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ],
+                                        "sh:order": 2,
+                                        "sh:path": "schema:name"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:anyURI"
+                                            }
+                                        ],
+                                        "sh:order": 3,
+                                        "sh:path": "schema:sameAs"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:anyURI"
+                                            }
+                                        ],
+                                        "sh:order": 4,
+                                        "sh:path": "schema:url"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "sh:class": "schema:Person",
+                            "sh:node": {
+                                "@type": "sh:NodeShape",
+                                "sh:property": [
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ],
+                                        "sh:order": 0,
+                                        "sh:path": "schema:email"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ],
+                                        "sh:order": 1,
+                                        "sh:path": "schema:faxNumber"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ],
+                                        "sh:order": 2,
+                                        "sh:path": "schema:givenName"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:anyURI"
+                                            }
+                                        ],
+                                        "sh:order": 3,
+                                        "sh:path": "schema:image"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ],
+                                        "sh:order": 4,
+                                        "sh:path": "schema:jobTitle"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ],
+                                        "sh:order": 5,
+                                        "sh:path": "schema:telephone"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:class": "schema:Organization",
+                                                "sh:node": {
+                                                    "@type": "sh:NodeShape",
+                                                    "sh:property": [
+                                                        {
+                                                            "@type": "sh:PropertyShape",
+                                                            "sh:maxCount": 1,
+                                                            "sh:minCount": 1,
+                                                            "sh:or": [
+                                                                {
+                                                                    "sh:class": "schema:Organization",
+                                                                    "sh:node": {
+                                                                        "@type": "sh:NodeShape",
+                                                                        "sh:property": [
+                                                                            {
+                                                                                "@type": "sh:PropertyShape",
+                                                                                "sh:maxCount": 1,
+                                                                                "sh:minCount": 1,
+                                                                                "sh:or": [
+                                                                                    {
+                                                                                        "sh:datatype": "xsd:string"
+                                                                                    }
+                                                                                ],
+                                                                                "sh:order": 0,
+                                                                                "sh:path": "schema:name"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            ],
+                                                            "sh:order": 0,
+                                                            "sh:path": "schema:department"
+                                                        },
+                                                        {
+                                                            "@type": "sh:PropertyShape",
+                                                            "sh:maxCount": 1,
+                                                            "sh:minCount": 1,
+                                                            "sh:or": [
+                                                                {
+                                                                    "sh:datatype": "xsd:string"
+                                                                }
+                                                            ],
+                                                            "sh:order": 1,
+                                                            "sh:path": "schema:name"
+                                                        },
+                                                        {
+                                                            "@type": "sh:PropertyShape",
+                                                            "sh:maxCount": 1,
+                                                            "sh:minCount": 1,
+                                                            "sh:or": [
+                                                                {
+                                                                    "sh:datatype": "xsd:anyURI"
+                                                                }
+                                                            ],
+                                                            "sh:order": 2,
+                                                            "sh:path": "schema:url"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ],
+                                        "sh:order": 6,
+                                        "sh:path": "schema:worksFor"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "sh:order": 2,
+                    "sh:path": "schema:author"
+                },
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:maxCount": 1,
+                    "sh:or": [
+                        {
+                            "sh:class": "schema:Organization",
+                            "sh:node": {
+                                "@type": "sh:NodeShape",
+                                "sh:property": [
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ],
+                                        "sh:order": 0,
+                                        "sh:path": "schema:name"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "sh:class": "schema:Person",
+                            "sh:node": {
+                                "@type": "sh:NodeShape",
+                                "sh:property": [
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ],
+                                        "sh:order": 0,
+                                        "sh:path": "schema:name"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "sh:order": 3,
+                    "sh:path": "schema:copyrightHolder"
+                },
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:maxCount": 1,
+                    "sh:or": [
+                        {
+                            "sh:datatype": "xsd:double"
+                        }
+                    ],
+                    "sh:order": 4,
+                    "sh:path": "schema:copyrightYear"
+                },
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:maxCount": 1,
+                    "sh:or": [
+                        {
+                            "sh:datatype": "xsd:date"
+                        },
+                        {
+                            "sh:datatype": "xsd:dateTime"
+                        }
+                    ],
+                    "sh:order": 5,
+                    "sh:path": "schema:dateModified"
+                },
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:maxCount": 1,
+                    "sh:minCount": 1,
+                    "sh:or": [
+                        {
+                            "sh:datatype": "xsd:date"
+                        }
+                    ],
+                    "sh:order": 6,
+                    "sh:path": "schema:datePublished"
+                },
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:maxCount": 1,
+                    "sh:or": [
+                        {
+                            "sh:datatype": "xsd:string"
+                        }
+                    ],
+                    "sh:order": 7,
+                    "sh:path": "schema:description"
+                },
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:maxCount": 1,
+                    "sh:or": [
+                        {
+                            "sh:class": "schema:Person",
+                            "sh:node": {
+                                "@type": "sh:NodeShape",
+                                "sh:property": [
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ],
+                                        "sh:order": 0,
+                                        "sh:path": "schema:email"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ],
+                                        "sh:order": 1,
+                                        "sh:path": "schema:faxNumber"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ],
+                                        "sh:order": 2,
+                                        "sh:path": "schema:givenName"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:anyURI"
+                                            }
+                                        ],
+                                        "sh:order": 3,
+                                        "sh:path": "schema:image"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ],
+                                        "sh:order": 4,
+                                        "sh:path": "schema:jobTitle"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ],
+                                        "sh:order": 5,
+                                        "sh:path": "schema:telephone"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:class": "schema:Organization",
+                                                "sh:node": {
+                                                    "@type": "sh:NodeShape",
+                                                    "sh:property": [
+                                                        {
+                                                            "@type": "sh:PropertyShape",
+                                                            "sh:maxCount": 1,
+                                                            "sh:minCount": 1,
+                                                            "sh:or": [
+                                                                {
+                                                                    "sh:class": "schema:Organization",
+                                                                    "sh:node": {
+                                                                        "@type": "sh:NodeShape",
+                                                                        "sh:property": [
+                                                                            {
+                                                                                "@type": "sh:PropertyShape",
+                                                                                "sh:maxCount": 1,
+                                                                                "sh:minCount": 1,
+                                                                                "sh:or": [
+                                                                                    {
+                                                                                        "sh:datatype": "xsd:string"
+                                                                                    }
+                                                                                ],
+                                                                                "sh:order": 0,
+                                                                                "sh:path": "schema:name"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            ],
+                                                            "sh:order": 0,
+                                                            "sh:path": "schema:department"
+                                                        },
+                                                        {
+                                                            "@type": "sh:PropertyShape",
+                                                            "sh:maxCount": 1,
+                                                            "sh:minCount": 1,
+                                                            "sh:or": [
+                                                                {
+                                                                    "sh:datatype": "xsd:string"
+                                                                }
+                                                            ],
+                                                            "sh:order": 1,
+                                                            "sh:path": "schema:name"
+                                                        },
+                                                        {
+                                                            "@type": "sh:PropertyShape",
+                                                            "sh:maxCount": 1,
+                                                            "sh:minCount": 1,
+                                                            "sh:or": [
+                                                                {
+                                                                    "sh:datatype": "xsd:anyURI"
+                                                                }
+                                                            ],
+                                                            "sh:order": 2,
+                                                            "sh:path": "schema:url"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ],
+                                        "sh:order": 6,
+                                        "sh:path": "schema:worksFor"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "sh:order": 8,
+                    "sh:path": "schema:editor"
+                },
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:maxCount": 1,
+                    "sh:minCount": 1,
+                    "sh:or": [
+                        {
+                            "sh:datatype": "xsd:string"
+                        }
+                    ],
+                    "sh:order": 9,
+                    "sh:path": "schema:headline"
+                },
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:maxCount": 1,
+                    "sh:or": [
+                        {
+                            "sh:datatype": "xsd:anyURI"
+                        },
+                        {
+                            "sh:datatype": "xsd:string"
+                        }
+                    ],
+                    "sh:order": 10,
+                    "sh:path": "schema:identifier"
+                },
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:minCount": 1,
+                    "sh:or": [
+                        {
+                            "sh:datatype": "xsd:string"
+                        },
+                        {
+                            "sh:class": "schema:Language",
+                            "sh:node": {
+                                "@type": "sh:NodeShape",
+                                "sh:property": [
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:minCount": 1,
+                                        "sh:order": 0,
+                                        "sh:path": "schema:name",
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ],
+                                        "sh:maxCount": 1,
+                                        "rdfs:comment": "This property specifies the full name of a language, e.g. English."
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:minCount": 0,
+                                        "sh:order": 1,
+                                        "sh:path": "schema:alternateName",
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ],
+                                        "rdfs:comment": "This property specifies the formal language code tag expressed in BCP 47, e.g. EN.",
+                                        "sh:maxCount": 1
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "sh:order": 11,
+                    "sh:path": "schema:inLanguage"
+                },
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:or": [
+                        {
+                            "sh:datatype": "xsd:string"
+                        }
+                    ],
+                    "sh:order": 12,
+                    "sh:path": "schema:keywords"
+                },
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:maxCount": 1,
+                    "sh:or": [
+                        {
+                            "sh:datatype": "xsd:anyURI"
+                        }
+                    ],
+                    "sh:order": 13,
+                    "sh:path": "schema:license"
+                },
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:maxCount": 1,
+                    "sh:or": [
+                        {
+                            "sh:class": "schema:Organization",
+                            "sh:node": {
+                                "@type": "sh:NodeShape",
+                                "sh:property": [
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ],
+                                        "sh:order": 0,
+                                        "sh:path": "schema:description"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:anyURI"
+                                            }
+                                        ],
+                                        "sh:order": 1,
+                                        "sh:path": "schema:image"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ],
+                                        "sh:order": 2,
+                                        "sh:path": "schema:name"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:anyURI"
+                                            }
+                                        ],
+                                        "sh:order": 3,
+                                        "sh:path": "schema:sameAs"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:anyURI"
+                                            }
+                                        ],
+                                        "sh:order": 4,
+                                        "sh:path": "schema:url"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "sh:class": "schema:Person",
+                            "sh:node": {
+                                "@type": "sh:NodeShape",
+                                "sh:property": [
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ],
+                                        "sh:order": 0,
+                                        "sh:path": "schema:email"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ],
+                                        "sh:order": 1,
+                                        "sh:path": "schema:faxNumber"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ],
+                                        "sh:order": 2,
+                                        "sh:path": "schema:givenName"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:anyURI"
+                                            }
+                                        ],
+                                        "sh:order": 3,
+                                        "sh:path": "schema:image"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ],
+                                        "sh:order": 4,
+                                        "sh:path": "schema:jobTitle"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ],
+                                        "sh:order": 5,
+                                        "sh:path": "schema:telephone"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:class": "schema:Organization",
+                                                "sh:node": {
+                                                    "@type": "sh:NodeShape",
+                                                    "sh:property": [
+                                                        {
+                                                            "@type": "sh:PropertyShape",
+                                                            "sh:maxCount": 1,
+                                                            "sh:minCount": 1,
+                                                            "sh:or": [
+                                                                {
+                                                                    "sh:class": "schema:Organization",
+                                                                    "sh:node": {
+                                                                        "@type": "sh:NodeShape",
+                                                                        "sh:property": [
+                                                                            {
+                                                                                "@type": "sh:PropertyShape",
+                                                                                "sh:maxCount": 1,
+                                                                                "sh:minCount": 1,
+                                                                                "sh:or": [
+                                                                                    {
+                                                                                        "sh:datatype": "xsd:string"
+                                                                                    }
+                                                                                ],
+                                                                                "sh:order": 0,
+                                                                                "sh:path": "schema:name"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            ],
+                                                            "sh:order": 0,
+                                                            "sh:path": "schema:department"
+                                                        },
+                                                        {
+                                                            "@type": "sh:PropertyShape",
+                                                            "sh:maxCount": 1,
+                                                            "sh:minCount": 1,
+                                                            "sh:or": [
+                                                                {
+                                                                    "sh:datatype": "xsd:string"
+                                                                }
+                                                            ],
+                                                            "sh:order": 1,
+                                                            "sh:path": "schema:name"
+                                                        },
+                                                        {
+                                                            "@type": "sh:PropertyShape",
+                                                            "sh:maxCount": 1,
+                                                            "sh:minCount": 1,
+                                                            "sh:or": [
+                                                                {
+                                                                    "sh:datatype": "xsd:anyURI"
+                                                                }
+                                                            ],
+                                                            "sh:order": 2,
+                                                            "sh:path": "schema:url"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ],
+                                        "sh:order": 6,
+                                        "sh:path": "schema:worksFor"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "sh:order": 14,
+                    "sh:path": "schema:publisher"
+                },
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:maxCount": 1,
+                    "sh:or": [
+                        {
+                            "sh:datatype": "xsd:anyURI"
+                        }
+                    ],
+                    "sh:order": 15,
+                    "sh:path": "schema:thumbnailUrl"
+                },
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:maxCount": 1,
+                    "sh:minCount": 1,
+                    "sh:or": [
+                        {
+                            "sh:datatype": "xsd:anyURI"
+                        }
+                    ],
+                    "sh:order": 16,
+                    "sh:path": "schema:url"
+                },
+                {
+                    "@type": "sh:PropertyShape",
+                    "sh:maxCount": 1,
+                    "sh:or": [
+                        {
+                            "sh:class": "schema:VideoObject",
+                            "sh:node": {
+                                "@type": "sh:NodeShape",
+                                "sh:property": [
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ],
+                                        "sh:order": 0,
+                                        "sh:path": "schema:caption"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ],
+                                        "sh:order": 1,
+                                        "sh:path": "schema:contentSize"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:anyURI"
+                                            }
+                                        ],
+                                        "sh:order": 2,
+                                        "sh:path": "schema:contentUrl"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:class": "schema:Organization",
+                                                "sh:node": {
+                                                    "@type": "sh:NodeShape",
+                                                    "sh:property": [
+                                                        {
+                                                            "@type": "sh:PropertyShape",
+                                                            "sh:maxCount": 1,
+                                                            "sh:minCount": 1,
+                                                            "sh:or": [
+                                                                {
+                                                                    "sh:datatype": "xsd:string"
+                                                                }
+                                                            ],
+                                                            "sh:order": 0,
+                                                            "sh:path": "schema:name"
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "sh:class": "schema:Person",
+                                                "sh:node": {
+                                                    "@type": "sh:NodeShape",
+                                                    "sh:property": [
+                                                        {
+                                                            "@type": "sh:PropertyShape",
+                                                            "sh:maxCount": 1,
+                                                            "sh:minCount": 1,
+                                                            "sh:or": [
+                                                                {
+                                                                    "sh:datatype": "xsd:string"
+                                                                }
+                                                            ],
+                                                            "sh:order": 0,
+                                                            "sh:path": "schema:name"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ],
+                                        "sh:order": 3,
+                                        "sh:path": "schema:copyrightHolder"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:double"
+                                            }
+                                        ],
+                                        "sh:order": 4,
+                                        "sh:path": "schema:copyrightYear"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:class": "schema:QuantitativeValue",
+                                                "sh:node": {
+                                                    "@type": "sh:NodeShape",
+                                                    "sh:property": [
+                                                        {
+                                                            "@type": "sh:PropertyShape",
+                                                            "sh:maxCount": 1,
+                                                            "sh:minCount": 1,
+                                                            "sh:or": [
+                                                                {
+                                                                    "sh:datatype": "xsd:double"
+                                                                },
+                                                                {
+                                                                    "sh:datatype": "xsd:string"
+                                                                }
+                                                            ],
+                                                            "sh:order": 0,
+                                                            "sh:path": "schema:value"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ],
+                                        "sh:order": 5,
+                                        "sh:path": "schema:height"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:class": "schema:Organization",
+                                                "sh:node": {
+                                                    "@type": "sh:NodeShape",
+                                                    "sh:property": [
+                                                        {
+                                                            "@type": "sh:PropertyShape",
+                                                            "sh:maxCount": 1,
+                                                            "sh:minCount": 1,
+                                                            "sh:or": [
+                                                                {
+                                                                    "sh:datatype": "xsd:string"
+                                                                }
+                                                            ],
+                                                            "sh:order": 0,
+                                                            "sh:path": "schema:name"
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "sh:class": "schema:Person",
+                                                "sh:node": {
+                                                    "@type": "sh:NodeShape",
+                                                    "sh:property": [
+                                                        {
+                                                            "@type": "sh:PropertyShape",
+                                                            "sh:maxCount": 1,
+                                                            "sh:minCount": 1,
+                                                            "sh:or": [
+                                                                {
+                                                                    "sh:datatype": "xsd:string"
+                                                                }
+                                                            ],
+                                                            "sh:order": 0,
+                                                            "sh:path": "schema:name"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ],
+                                        "sh:order": 6,
+                                        "sh:path": "schema:publisher"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:class": "schema:ImageObject",
+                                                "sh:node": {
+                                                    "@type": "sh:NodeShape",
+                                                    "sh:property": [
+                                                        {
+                                                            "@type": "sh:PropertyShape",
+                                                            "sh:maxCount": 1,
+                                                            "sh:or": [
+                                                                {
+                                                                    "sh:datatype": "xsd:anyURI"
+                                                                },
+                                                                {
+                                                                    "sh:datatype": "xsd:string"
+                                                                }
+                                                            ],
+                                                            "sh:order": 0,
+                                                            "sh:path": "schema:identifier"
+                                                        },
+                                                        {
+                                                            "@type": "sh:PropertyShape",
+                                                            "sh:maxCount": 1,
+                                                            "sh:minCount": 1,
+                                                            "sh:or": [
+                                                                {
+                                                                    "sh:datatype": "xsd:anyURI"
+                                                                }
+                                                            ],
+                                                            "sh:order": 1,
+                                                            "sh:path": "schema:url"
+                                                        },
+                                                        {
+                                                            "@type": "sh:PropertyShape",
+                                                            "sh:maxCount": 1,
+                                                            "sh:or": [
+                                                                {
+                                                                    "sh:datatype": "xsd:string"
+                                                                }
+                                                            ],
+                                                            "sh:order": 2,
+                                                            "sh:path": "schema:caption"
+                                                        },
+                                                        {
+                                                            "@type": "sh:PropertyShape",
+                                                            "sh:maxCount": 1,
+                                                            "sh:or": [
+                                                                {
+                                                                    "sh:datatype": "xsd:anyURI"
+                                                                }
+                                                            ],
+                                                            "sh:order": 3,
+                                                            "sh:path": "schema:contentUrl"
+                                                        },
+                                                        {
+                                                            "@type": "sh:PropertyShape",
+                                                            "sh:maxCount": 1,
+                                                            "sh:or": [
+                                                                {
+                                                                    "sh:class": "schema:QuantitativeValue",
+                                                                    "sh:node": {
+                                                                        "@type": "sh:NodeShape",
+                                                                        "sh:property": [
+                                                                            {
+                                                                                "@type": "sh:PropertyShape",
+                                                                                "sh:maxCount": 1,
+                                                                                "sh:minCount": 1,
+                                                                                "sh:or": [
+                                                                                    {
+                                                                                        "sh:datatype": "xsd:double"
+                                                                                    },
+                                                                                    {
+                                                                                        "sh:datatype": "xsd:string"
+                                                                                    }
+                                                                                ],
+                                                                                "sh:order": 0,
+                                                                                "sh:path": "schema:value"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            ],
+                                                            "sh:order": 4,
+                                                            "sh:path": "schema:height"
+                                                        },
+                                                        {
+                                                            "@type": "sh:PropertyShape",
+                                                            "sh:maxCount": 1,
+                                                            "sh:or": [
+                                                                {
+                                                                    "sh:class": "schema:QuantitativeValue",
+                                                                    "sh:node": {
+                                                                        "@type": "sh:NodeShape",
+                                                                        "sh:property": [
+                                                                            {
+                                                                                "@type": "sh:PropertyShape",
+                                                                                "sh:maxCount": 1,
+                                                                                "sh:minCount": 1,
+                                                                                "sh:or": [
+                                                                                    {
+                                                                                        "sh:datatype": "xsd:double"
+                                                                                    },
+                                                                                    {
+                                                                                        "sh:datatype": "xsd:string"
+                                                                                    }
+                                                                                ],
+                                                                                "sh:order": 0,
+                                                                                "sh:path": "schema:value"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            ],
+                                                            "sh:order": 5,
+                                                            "sh:path": "schema:width"
+                                                        },
+                                                        {
+                                                            "@type": "sh:PropertyShape",
+                                                            "sh:maxCount": 1,
+                                                            "sh:or": [
+                                                                {
+                                                                    "sh:class": "schema:Organization",
+                                                                    "sh:node": {
+                                                                        "@type": "sh:NodeShape",
+                                                                        "sh:property": [
+                                                                            {
+                                                                                "@type": "sh:PropertyShape",
+                                                                                "sh:maxCount": 1,
+                                                                                "sh:minCount": 1,
+                                                                                "sh:or": [
+                                                                                    {
+                                                                                        "sh:datatype": "xsd:string"
+                                                                                    }
+                                                                                ],
+                                                                                "sh:order": 0,
+                                                                                "sh:path": "schema:name"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "sh:class": "schema:Person",
+                                                                    "sh:node": {
+                                                                        "@type": "sh:NodeShape",
+                                                                        "sh:property": [
+                                                                            {
+                                                                                "@type": "sh:PropertyShape",
+                                                                                "sh:maxCount": 1,
+                                                                                "sh:minCount": 1,
+                                                                                "sh:or": [
+                                                                                    {
+                                                                                        "sh:datatype": "xsd:string"
+                                                                                    }
+                                                                                ],
+                                                                                "sh:order": 0,
+                                                                                "sh:path": "schema:name"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            ],
+                                                            "sh:order": 6,
+                                                            "sh:path": "schema:copyrightHolder"
+                                                        },
+                                                        {
+                                                            "@type": "sh:PropertyShape",
+                                                            "sh:maxCount": 1,
+                                                            "sh:or": [
+                                                                {
+                                                                    "sh:datatype": "xsd:double"
+                                                                }
+                                                            ],
+                                                            "sh:order": 7,
+                                                            "sh:path": "schema:copyrightYear"
+                                                        },
+                                                        {
+                                                            "@type": "sh:PropertyShape",
+                                                            "sh:maxCount": 1,
+                                                            "sh:or": [
+                                                                {
+                                                                    "sh:datatype": "xsd:anyURI"
+                                                                }
+                                                            ],
+                                                            "sh:order": 8,
+                                                            "sh:path": "schema:license"
+                                                        },
+                                                        {
+                                                            "@type": "sh:PropertyShape",
+                                                            "sh:maxCount": 1,
+                                                            "sh:or": [
+                                                                {
+                                                                    "sh:datatype": "xsd:date"
+                                                                }
+                                                            ],
+                                                            "sh:order": 9,
+                                                            "sh:path": "schema:uploadDate"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ],
+                                        "sh:order": 7,
+                                        "sh:path": "schema:thumbnail"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:anyURI"
+                                            }
+                                        ],
+                                        "sh:order": 8,
+                                        "sh:path": "schema:thumbnailUrl"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:date"
+                                            }
+                                        ],
+                                        "sh:order": 9,
+                                        "sh:path": "schema:uploadDate"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:anyURI"
+                                            }
+                                        ],
+                                        "sh:order": 10,
+                                        "sh:path": "schema:url"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:minCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:string"
+                                            }
+                                        ],
+                                        "sh:order": 11,
+                                        "sh:path": "schema:videoQuality"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:maxCount": 1,
+                                        "sh:or": [
+                                            {
+                                                "sh:class": "schema:QuantitativeValue",
+                                                "sh:node": {
+                                                    "@type": "sh:NodeShape",
+                                                    "sh:property": [
+                                                        {
+                                                            "@type": "sh:PropertyShape",
+                                                            "sh:maxCount": 1,
+                                                            "sh:minCount": 1,
+                                                            "sh:or": [
+                                                                {
+                                                                    "sh:datatype": "xsd:double"
+                                                                },
+                                                                {
+                                                                    "sh:datatype": "xsd:string"
+                                                                }
+                                                            ],
+                                                            "sh:order": 0,
+                                                            "sh:path": "schema:value"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ],
+                                        "sh:order": 12,
+                                        "sh:path": "schema:width"
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:minCount": 0,
+                                        "sh:order": 13,
+                                        "sh:path": "schema:license",
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:anyURI"
+                                            }
+                                        ],
+                                        "sh:maxCount": 1
+                                    },
+                                    {
+                                        "@type": "sh:PropertyShape",
+                                        "sh:minCount": 0,
+                                        "sh:order": 14,
+                                        "sh:path": "schema:datePublished",
+                                        "sh:or": [
+                                            {
+                                                "sh:datatype": "xsd:date"
+                                            }
+                                        ],
+                                        "sh:maxCount": 1
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "sh:order": 17,
+                    "sh:path": "schema:video"
+                }
+            ],
+            "sh:targetClass": "schema:BlogPosting"
+        }
+    ],
+    "@id": "https://semantify.it/ds/epKee47oP"
+}
