@@ -6,3 +6,5 @@ In our [wiki](https://github.com/ODTA/ds/wiki) you can find all information abou
 * how to submit an RDS as a Github Issue
 * where to see the progress of your issue
 * how to participate in discussions about issues (RDSs)
+
+## Visit the [wiki!](https://github.com/ODTA/ds/wiki)
