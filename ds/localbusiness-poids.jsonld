@@ -1,0 +1,167 @@
+{
+    "@context": {
+      "ds": "https://vocab.sti2.at/ds/",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "schema": "https://schema.org/",
+      "sh": "http://www.w3.org/ns/shacl#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "ds:propertyDisplayOrder": {
+        "@container": "@list",
+        "@type": "@id"
+      },
+      "ds:subDSOf": {
+        "@type": "@id"
+      },
+      "ds:usedVocabulary": {
+        "@type": "@id"
+      },
+      "sh:targetClass": {
+        "@type": "@id"
+      },
+      "sh:targetObjectsOf": {
+        "@type": "@id"
+      },
+      "sh:targetSubjectsOf": {
+        "@type": "@id"
+      },
+      "sh:class": {
+        "@type": "@id"
+      },
+      "sh:path": {
+        "@type": "@id"
+      },
+      "sh:datatype": {
+        "@type": "@id"
+      },
+      "sh:equals": {
+        "@type": "@id"
+      },
+      "sh:disjoint": {
+        "@type": "@id"
+      },
+      "sh:lessThan": {
+        "@type": "@id"
+      },
+      "sh:lessThanOrEquals": {
+        "@type": "@id"
+      },
+      "sh:in": {
+        "@container": "@list"
+      },
+      "sh:languageIn": {
+        "@container": "@list"
+      },
+      "sh:or": {
+        "@container": "@list"
+      },
+      "odta": "https://odta.io/voc/"
+    },
+    "@graph": [
+      {
+        "@id": "https://semantify.it/ds/hEEpLADIiYVq",
+        "@type": "ds:DomainSpecification",
+        "ds:grammarNodeType": "RootNode",
+        "sh:targetClass": [
+          "schema:LocalBusiness"
+        ],
+        "sh:class": [
+          "schema:LocalBusiness"
+        ],
+        "schema:name": [
+          {
+            "@language": "en",
+            "@value": "LocalBusiness-POIDS"
+          }
+        ],
+        "schema:description": [
+          {
+            "@language": "en",
+            "@value": "ODTA LocalBusiness Point of Interest Domain Specification"
+          }
+        ],
+        "schema:author": {
+          "@type": "schema:Person",
+          "schema:memberOf": {
+            "@type": "schema:Organization",
+            "schema:name": "DSE Organization"
+          },
+          "schema:name": "DSE User"
+        },
+        "ds:version": "7.0",
+        "schema:version": "1.00",
+        "schema:schemaVersion": "15.0",
+        "ds:usedVocabulary": [
+          "https://semantify.it/voc/NOqAmidUDGqF",
+          "https://semantify.it/voc/LFnFyxZsfEXl"
+        ],
+        "sh:closed": false,
+        "ds:propertyDisplayOrder": [
+          "schema:makesOffer",
+          "schema:paymentAccepted"
+        ],
+        "sh:property": [
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:makesOffer",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/hEEpLADIiYVq#qlAvO",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:Offer"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:name"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:paymentAccepted",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:string"
+              },
+              {
+                "ds:grammarNodeType": "StandardEnumerationWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/hEEpLADIiYVq#doORC",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "StandardEnumeration",
+                  "sh:class": [
+                    "schema:PaymentMethod"
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

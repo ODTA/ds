@@ -1,0 +1,3020 @@
+{
+    "@context": {
+      "ds": "https://vocab.sti2.at/ds/",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "schema": "https://schema.org/",
+      "sh": "http://www.w3.org/ns/shacl#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "ds:propertyDisplayOrder": {
+        "@container": "@list",
+        "@type": "@id"
+      },
+      "ds:subDSOf": {
+        "@type": "@id"
+      },
+      "ds:usedVocabulary": {
+        "@type": "@id"
+      },
+      "sh:targetClass": {
+        "@type": "@id"
+      },
+      "sh:targetObjectsOf": {
+        "@type": "@id"
+      },
+      "sh:targetSubjectsOf": {
+        "@type": "@id"
+      },
+      "sh:class": {
+        "@type": "@id"
+      },
+      "sh:path": {
+        "@type": "@id"
+      },
+      "sh:datatype": {
+        "@type": "@id"
+      },
+      "sh:equals": {
+        "@type": "@id"
+      },
+      "sh:disjoint": {
+        "@type": "@id"
+      },
+      "sh:lessThan": {
+        "@type": "@id"
+      },
+      "sh:lessThanOrEquals": {
+        "@type": "@id"
+      },
+      "sh:in": {
+        "@container": "@list"
+      },
+      "sh:languageIn": {
+        "@container": "@list"
+      },
+      "sh:or": {
+        "@container": "@list"
+      },
+      "odta": "https://odta.io/voc/"
+    },
+    "@graph": [
+      {
+        "@id": "https://semantify.it/ds/UyUtoaMveiNM",
+        "@type": "ds:DomainSpecification",
+        "ds:grammarNodeType": "RootNode",
+        "sh:targetClass": [
+          "odta:CaveOrMine"
+        ],
+        "sh:class": [
+          "odta:CaveOrMine"
+        ],
+        "schema:name": [
+          {
+            "@language": "en",
+            "@value": "CaveOrMineDS"
+          }
+        ],
+        "schema:description": [
+          {
+            "@language": "en",
+            "@value": "ODTA Cave or Mine Domain Specification"
+          }
+        ],
+        "schema:author": {
+          "@type": "schema:Person",
+          "schema:memberOf": {
+            "@type": "schema:Organization",
+            "schema:name": "DSE Organization"
+          },
+          "schema:name": "DSE User"
+        },
+        "ds:version": "7.0",
+        "schema:version": "1.01",
+        "schema:schemaVersion": "15.0",
+        "ds:usedVocabulary": [
+          "https://semantify.it/voc/NOqAmidUDGqF",
+          "https://semantify.it/voc/LFnFyxZsfEXl",
+          "https://semantify.it/voc/ttRRncIovktP"
+        ],
+        "sh:closed": false,
+        "ds:propertyDisplayOrder": [
+          "odta:kindOfPOI",
+          "odta:accessModality",
+          "odta:numberOfLevels",
+          "odta:numberOfStairs",
+          "odta:pathCondition",
+          "odta:dripActivity",
+          "odta:humidity",
+          "odta:temperature",
+          "odta:pathLength",
+          "schema:additionalProperty",
+          "schema:additionalType",
+          "schema:address",
+          "schema:amenityFeature",
+          "schema:containedInPlace",
+          "schema:containsPlace",
+          "schema:description",
+          "schema:event",
+          "schema:geo",
+          "schema:hasMap",
+          "schema:identifier",
+          "schema:image",
+          "schema:isAccessibleForFree",
+          "schema:maximumAttendeeCapacity",
+          "schema:name",
+          "odta:relatedPerson",
+          "odta:transportationMode",
+          "schema:openingHoursSpecification",
+          "schema:publicAccess",
+          "schema:sameAs",
+          "schema:sdLicense",
+          "schema:smokingAllowed",
+          "schema:specialOpeningHoursSpecification",
+          "schema:subjectOf",
+          "schema:telephone",
+          "schema:url"
+        ],
+        "sh:property": [
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "odta:kindOfPOI",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "RestrictedEnumerationWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/UyUtoaMveiNM#QyrwB",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedEnumeration",
+                  "sh:class": [
+                    "odta:CaveOrMineEnumeration"
+                  ],
+                  "sh:in": [
+                    {
+                      "@id": "odta:Cave"
+                    },
+                    {
+                      "@id": "odta:StalactiteCave"
+                    },
+                    {
+                      "@id": "odta:ShowMine"
+                    },
+                    {
+                      "@id": "odta:Grotto"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "odta:accessModality",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "RestrictedEnumerationWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/UyUtoaMveiNM#iVpJs",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedEnumeration",
+                  "sh:class": [
+                    "odta:AccessModalityEnumeration"
+                  ],
+                  "sh:in": [
+                    {
+                      "@id": "odta:Footpath"
+                    },
+                    {
+                      "@id": "odta:TunnelRailway"
+                    },
+                    {
+                      "@id": "odta:Aufzug"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "odta:numberOfLevels",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:integer"
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "odta:numberOfStairs",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:integer"
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "odta:pathCondition",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:string"
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "odta:dripActivity",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:string"
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "odta:humidity",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "ExternalReferenceWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/pLLcDibHVJsM"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "odta:temperature",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "ExternalReferenceWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/pLLcDibHVJsM"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "odta:pathLength",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "ExternalReferenceWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/pLLcDibHVJsM"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:additionalProperty",
+            "rdfs:comment": [
+              {
+                "@language": "en",
+                "@value": "Specific properties of POIs that are relevant for specific regions but not part of the standard vocabulary can be described with schema:additionalProperty (e.g., whether a POI is part of the industrial culture). See Section 4.3.2 for potential values for CaveOrMine"
+              }
+            ],
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/UyUtoaMveiNM#YCVXm",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:PropertyValue"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:value",
+                    "schema:name",
+                    "schema:unitCode"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:value",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:boolean"
+                        },
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:double"
+                        },
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        }
+                      ]
+                    },
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string",
+                          "sh:in": [
+                            "Industrial culture",
+                            "Industrielle Kultur"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:unitCode",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        },
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:anyURI"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:additionalType",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:anyURI"
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:address",
+            "rdfs:comment": [
+              {
+                "@language": "en",
+                "@value": "For the POIs that are not local businesses, the schema:email property of the schema:PostalAddress type can be used to describe email addresses.\n"
+              }
+            ],
+            "sh:minCount": 0,
+            "sh:maxCount": 1,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/UyUtoaMveiNM#SmZiB",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:PostalAddress"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:name"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:amenityFeature",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/UyUtoaMveiNM#avIdE",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:LocationFeatureSpecification"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:name",
+                    "schema:value",
+                    "schema:unitCode"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string",
+                          "sh:in": [
+                            "Usage",
+                            "Nutzbarkeit",
+                            "Distance to public transportation",
+                            "Entfernung ÖPNV",
+                            "Photography",
+                            "Gastronomy",
+                            "Sanitary Facilities",
+                            "Fotografieren",
+                            "Gastronomie",
+                            "Sanitäre Anlagen"
+                          ]
+                        },
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "rdf:langString"
+                        }
+                      ]
+                    },
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:value",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:boolean"
+                        },
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string",
+                          "sh:in": [
+                            "Indoor",
+                            "Outdoor",
+                            "Allowed",
+                            "Not Allowed",
+                            "License required",
+                            "Restaurant",
+                            "Cafe",
+                            "Fastfood",
+                            "Fast food",
+                            "Toilet",
+                            "Wickelraum",
+                            "Toilette",
+                            "Changing room"
+                          ]
+                        },
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:double"
+                        }
+                      ]
+                    },
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:unitCode",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        },
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:anyURI"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:containedInPlace",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/UyUtoaMveiNM#ANXOG",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:Place"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:name"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:containsPlace",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/UyUtoaMveiNM#vdVly",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:Place"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:name"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:description",
+            "rdfs:comment": [
+              {
+                "@language": "en",
+                "@value": "A lodging business can have multiple descriptions. This property can be directly used with a text value (one short, one long description)."
+              }
+            ],
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:string"
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:event",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "ExternalReferenceWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:geo",
+            "sh:minCount": 0,
+            "sh:maxCount": 1,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/UyUtoaMveiNM#dPdMI",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:GeoCoordinates"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:longitude",
+                    "schema:latitude",
+                    "schema:elevation"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:longitude",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:double"
+                        }
+                      ]
+                    },
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:latitude",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:double"
+                        }
+                      ]
+                    },
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:elevation",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:double"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:hasMap",
+            "sh:minCount": 0,
+            "sh:maxCount": 1,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:anyURI"
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:identifier",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/UyUtoaMveiNM#ELBWH",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:PropertyValue"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:name",
+                    "schema:value"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        }
+                      ]
+                    },
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:value",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        },
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:double"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:string"
+              },
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:anyURI"
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:image",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:anyURI"
+              },
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/UyUtoaMveiNM#pGSha",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:ImageObject"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:name"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:isAccessibleForFree",
+            "sh:minCount": 0,
+            "sh:maxCount": 1,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:boolean"
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:maximumAttendeeCapacity",
+            "sh:minCount": 0,
+            "sh:maxCount": 1,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:integer"
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:name",
+            "sh:minCount": 1,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:string"
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "odta:relatedPerson",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/UyUtoaMveiNM#ISGfJ",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:Person"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:name"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "odta:transportationMode",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "RestrictedEnumerationWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/UyUtoaMveiNM#DanRK",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedEnumeration",
+                  "sh:class": [
+                    "odta:TransportationModeEnumeration"
+                  ],
+                  "sh:in": [
+                    {
+                      "@id": "odta:ByBus"
+                    },
+                    {
+                      "@id": "odta:OnFoot"
+                    },
+                    {
+                      "@id": "odta:ByBicycle"
+                    },
+                    {
+                      "@id": "odta:ByCar"
+                    },
+                    {
+                      "@id": "odta:ByCarriage"
+                    },
+                    {
+                      "@id": "odta:ByBoat"
+                    },
+                    {
+                      "@id": "odta:ByShip"
+                    },
+                    {
+                      "@id": "odta:ByCanoe"
+                    },
+                    {
+                      "@id": "odta:BySegway"
+                    },
+                    {
+                      "@id": "odta:ByEScooter"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:openingHoursSpecification",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/UyUtoaMveiNM#IsQUL",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:OpeningHoursSpecification"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:name"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:publicAccess",
+            "sh:minCount": 0,
+            "sh:maxCount": 1,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:boolean"
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:sameAs",
+            "rdfs:comment": [
+              {
+                "@language": "en",
+                "@value": "E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website."
+              }
+            ],
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:anyURI"
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:sdLicense",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:anyURI"
+              },
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/UyUtoaMveiNM#nxeEp",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:CreativeWork"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:name"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:smokingAllowed",
+            "sh:minCount": 0,
+            "sh:maxCount": 1,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:boolean"
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:specialOpeningHoursSpecification",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/UyUtoaMveiNM#lRRoF",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:OpeningHoursSpecification"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:name"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:subjectOf",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/UyUtoaMveiNM#fJzut",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:CreativeWork"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:name"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:telephone",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:string"
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:url",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:anyURI"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@id": "https://semantify.it/ds/pLLcDibHVJsM",
+        "@type": "sh:NodeShape",
+        "ds:grammarNodeType": "RestrictedClass",
+        "ds:pathNodeType": "ExternalDefinition",
+        "sh:class": [
+          "schema:QuantitativeValue"
+        ],
+        "sh:closed": false,
+        "ds:propertyDisplayOrder": [
+          "schema:unitCode",
+          "schema:value"
+        ],
+        "sh:property": [
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:unitCode",
+            "sh:minCount": 1,
+            "sh:maxCount": 1,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:string"
+              },
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:anyURI"
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:value",
+            "sh:minCount": 1,
+            "sh:maxCount": 1,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:boolean"
+              },
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:string"
+              },
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:double"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@id": "https://semantify.it/ds/PfgQEDjfBnhM",
+        "@type": "sh:NodeShape",
+        "ds:grammarNodeType": "RestrictedClass",
+        "ds:pathNodeType": "ExternalDefinition",
+        "sh:class": [
+          "schema:Event"
+        ],
+        "sh:closed": false,
+        "ds:propertyDisplayOrder": [
+          "schema:location",
+          "schema:offers",
+          "odta:theme",
+          "odta:kindOfEvent",
+          "schema:audience",
+          "schema:description",
+          "schema:contributor",
+          "odta:donationLink",
+          "schema:doorTime",
+          "schema:endDate",
+          "schema:eventAttendanceMode",
+          "schema:eventSchedule",
+          "schema:eventStatus",
+          "schema:identifier",
+          "schema:image",
+          "schema:inLanguage",
+          "schema:isAccessibleForFree",
+          "schema:name",
+          "schema:organizer",
+          "schema:performer",
+          "schema:potentialAction",
+          "schema:previousStartDate",
+          "schema:review",
+          "schema:sameAs",
+          "schema:sponsor",
+          "schema:startDate",
+          "schema:subEvent",
+          "schema:superEvent",
+          "schema:typicalAgeRange",
+          "schema:url",
+          "schema:about",
+          "schema:subjectOf",
+          "schema:sdLicense",
+          "schema:sdPublisher",
+          "schema:sdDatePublished"
+        ],
+        "sh:property": [
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:location",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#qkmXa",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:VirtualLocation"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:name"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#Uzrzn",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:Place"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:name"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#MlmeM",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:PostalAddress"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:name"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:string"
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:offers",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#xevlZ",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:Offer"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:name"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "odta:theme",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "RestrictedEnumerationWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#QymIm",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedEnumeration",
+                  "sh:class": [
+                    "odta:EventThemeEnumeration"
+                  ],
+                  "sh:in": [
+                    {
+                      "@id": "odta:60sMusic"
+                    },
+                    {
+                      "@id": "odta:70sMusic"
+                    },
+                    {
+                      "@id": "odta:80sMusic"
+                    },
+                    {
+                      "@id": "odta:90sMusic"
+                    },
+                    {
+                      "@id": "odta:Acapella"
+                    },
+                    {
+                      "@id": "odta:Alternative"
+                    },
+                    {
+                      "@id": "odta:Blues"
+                    },
+                    {
+                      "@id": "odta:Chanson"
+                    },
+                    {
+                      "@id": "odta:Chillout"
+                    },
+                    {
+                      "@id": "odta:Christmas"
+                    },
+                    {
+                      "@id": "odta:Competition"
+                    },
+                    {
+                      "@id": "odta:Country"
+                    },
+                    {
+                      "@id": "odta:Culture"
+                    },
+                    {
+                      "@id": "odta:Dancehall"
+                    },
+                    {
+                      "@id": "odta:ActiveParticipation"
+                    },
+                    {
+                      "@id": "odta:DrumAndBassMusic"
+                    },
+                    {
+                      "@id": "odta:Easter"
+                    },
+                    {
+                      "@id": "odta:ElectroMusic"
+                    },
+                    {
+                      "@id": "odta:Family"
+                    },
+                    {
+                      "@id": "odta:Folk"
+                    },
+                    {
+                      "@id": "odta:Folklore"
+                    },
+                    {
+                      "@id": "odta:Geography"
+                    },
+                    {
+                      "@id": "odta:GoaMusic"
+                    },
+                    {
+                      "@id": "odta:Gospel"
+                    },
+                    {
+                      "@id": "odta:Halloween"
+                    },
+                    {
+                      "@id": "odta:Hardcore"
+                    },
+                    {
+                      "@id": "odta:Hardstyle"
+                    },
+                    {
+                      "@id": "odta:Health"
+                    },
+                    {
+                      "@id": "odta:HipHop"
+                    },
+                    {
+                      "@id": "odta:History"
+                    },
+                    {
+                      "@id": "odta:Housec"
+                    },
+                    {
+                      "@id": "odta:Indie"
+                    },
+                    {
+                      "@id": "odta:Jazz"
+                    },
+                    {
+                      "@id": "odta:Klassik"
+                    },
+                    {
+                      "@id": "odta:Literature"
+                    },
+                    {
+                      "@id": "odta:Lounge"
+                    },
+                    {
+                      "@id": "odta:Maritime"
+                    },
+                    {
+                      "@id": "odta:Media"
+                    },
+                    {
+                      "@id": "odta:Metal"
+                    },
+                    {
+                      "@id": "odta:Music"
+                    },
+                    {
+                      "@id": "odta:NewYearsEve"
+                    },
+                    {
+                      "@id": "odta:NightLife"
+                    },
+                    {
+                      "@id": "odta:Nutrition"
+                    },
+                    {
+                      "@id": "odta:Oktoberfest"
+                    },
+                    {
+                      "@id": "odta:Percussion"
+                    },
+                    {
+                      "@id": "odta:Politics"
+                    },
+                    {
+                      "@id": "odta:Pop"
+                    },
+                    {
+                      "@id": "odta:Psytrance"
+                    },
+                    {
+                      "@id": "odta:Punkrock"
+                    },
+                    {
+                      "@id": "odta:Reggae"
+                    },
+                    {
+                      "@id": "odta:Religious"
+                    },
+                    {
+                      "@id": "odta:RnB"
+                    },
+                    {
+                      "@id": "odta:Rock"
+                    },
+                    {
+                      "@id": "odta:Schlager"
+                    },
+                    {
+                      "@id": "odta:Science"
+                    },
+                    {
+                      "@id": "odta:SingerSongwriter"
+                    },
+                    {
+                      "@id": "odta:Ska"
+                    },
+                    {
+                      "@id": "odta:Social"
+                    },
+                    {
+                      "@id": "odta:Society"
+                    },
+                    {
+                      "@id": "odta:Spiritual"
+                    },
+                    {
+                      "@id": "odta:Sports"
+                    },
+                    {
+                      "@id": "odta:Swing"
+                    },
+                    {
+                      "@id": "odta:Technology"
+                    },
+                    {
+                      "@id": "odta:Techno"
+                    },
+                    {
+                      "@id": "odta:Traditional"
+                    },
+                    {
+                      "@id": "odta:Travel"
+                    },
+                    {
+                      "@id": "odta:Urban"
+                    },
+                    {
+                      "@id": "odta:Folkmusic"
+                    },
+                    {
+                      "@id": "odta:Wellness"
+                    },
+                    {
+                      "@id": "odta:WorldMusic"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "odta:kindOfEvent",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "RestrictedEnumerationWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#ZjYkH",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedEnumeration",
+                  "sh:class": [
+                    "odta:DanceEventEnumeration"
+                  ],
+                  "sh:in": [
+                    {
+                      "@id": "odta:Ball"
+                    },
+                    {
+                      "@id": "odta:Party"
+                    }
+                  ]
+                }
+              },
+              {
+                "ds:grammarNodeType": "RestrictedEnumerationWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#ChGXQ",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedEnumeration",
+                  "sh:class": [
+                    "odta:EducationEventEnumeration"
+                  ],
+                  "sh:in": [
+                    {
+                      "@id": "odta:Excursion"
+                    },
+                    {
+                      "@id": "odta:Seminar"
+                    },
+                    {
+                      "@id": "odta:Workshop"
+                    },
+                    {
+                      "@id": "odta:CraftingCourse"
+                    },
+                    {
+                      "@id": "odta:CookingClass"
+                    },
+                    {
+                      "@id": "odta:SportsCourse"
+                    }
+                  ]
+                }
+              },
+              {
+                "ds:grammarNodeType": "RestrictedEnumerationWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#Suyvc",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedEnumeration",
+                  "sh:class": [
+                    "odta:EventEnumeration"
+                  ],
+                  "sh:in": [
+                    {
+                      "@id": "odta:Conference"
+                    },
+                    {
+                      "@id": "odta:Congress"
+                    },
+                    {
+                      "@id": "odta:Convention"
+                    },
+                    {
+                      "@id": "odta:OpenAir"
+                    }
+                  ]
+                }
+              },
+              {
+                "ds:grammarNodeType": "RestrictedEnumerationWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#HKiCE",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedEnumeration",
+                  "sh:class": [
+                    "odta:ExhibitionEventEnumeration"
+                  ],
+                  "sh:in": [
+                    {
+                      "@id": "odta:ConsumerFair"
+                    },
+                    {
+                      "@id": "odta:ExhibitionOpening"
+                    },
+                    {
+                      "@id": "odta:Fair"
+                    },
+                    {
+                      "@id": "odta:PermanentExhibition"
+                    },
+                    {
+                      "@id": "odta:TradeFair"
+                    }
+                  ]
+                }
+              },
+              {
+                "ds:grammarNodeType": "RestrictedEnumerationWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#JWYNl",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedEnumeration",
+                  "sh:class": [
+                    "odta:FestivalEnumeration"
+                  ],
+                  "sh:in": [
+                    {
+                      "@id": "odta:Schützenfest"
+                    },
+                    {
+                      "@id": "odta:BeerFestival"
+                    },
+                    {
+                      "@id": "odta:CarnivalParade"
+                    },
+                    {
+                      "@id": "odta:CarnivalSession"
+                    },
+                    {
+                      "@id": "odta:CityFestival"
+                    },
+                    {
+                      "@id": "odta:FestivalOfLights"
+                    },
+                    {
+                      "@id": "odta:Fireworks"
+                    },
+                    {
+                      "@id": "odta:Funfair"
+                    },
+                    {
+                      "@id": "odta:HistoricalParade"
+                    },
+                    {
+                      "@id": "odta:Illumination"
+                    },
+                    {
+                      "@id": "odta:StreetFestival"
+                    },
+                    {
+                      "@id": "odta:VillageFestival"
+                    },
+                    {
+                      "@id": "odta:HarvestFestival"
+                    },
+                    {
+                      "@id": "odta:WineFestival"
+                    }
+                  ]
+                }
+              },
+              {
+                "ds:grammarNodeType": "RestrictedEnumerationWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#eKSSE",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedEnumeration",
+                  "sh:class": [
+                    "odta:ScreeningEventEnumeration"
+                  ],
+                  "sh:in": [
+                    {
+                      "@id": "odta:CinemaEvent"
+                    }
+                  ]
+                }
+              },
+              {
+                "ds:grammarNodeType": "RestrictedEnumerationWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#csDbG",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedEnumeration",
+                  "sh:class": [
+                    "odta:SportsEventEnumeration"
+                  ],
+                  "sh:in": [
+                    {
+                      "@id": "odta:Athletics"
+                    },
+                    {
+                      "@id": "odta:Basketball"
+                    },
+                    {
+                      "@id": "odta:Bouldering"
+                    },
+                    {
+                      "@id": "odta:Canoe"
+                    },
+                    {
+                      "@id": "odta:Cycling"
+                    },
+                    {
+                      "@id": "odta:CyclingTour"
+                    },
+                    {
+                      "@id": "odta:Dancing"
+                    },
+                    {
+                      "@id": "odta:Fitness"
+                    },
+                    {
+                      "@id": "odta:Football"
+                    },
+                    {
+                      "@id": "odta:Golf"
+                    },
+                    {
+                      "@id": "odta:Gymnastics"
+                    },
+                    {
+                      "@id": "odta:Handball"
+                    },
+                    {
+                      "@id": "odta:Hiking"
+                    },
+                    {
+                      "@id": "odta:HikingTour"
+                    },
+                    {
+                      "@id": "odta:HorseRiding"
+                    },
+                    {
+                      "@id": "odta:IceHockey"
+                    },
+                    {
+                      "@id": "odta:InLineSkating"
+                    },
+                    {
+                      "@id": "odta:Kayak"
+                    },
+                    {
+                      "@id": "odta:KiteSurfing"
+                    },
+                    {
+                      "@id": "odta:MartialArts"
+                    },
+                    {
+                      "@id": "odta:Motorsport"
+                    },
+                    {
+                      "@id": "odta:Regatta"
+                    },
+                    {
+                      "@id": "odta:Running"
+                    },
+                    {
+                      "@id": "odta:Sailing"
+                    },
+                    {
+                      "@id": "odta:SportCourse"
+                    },
+                    {
+                      "@id": "odta:StandUpPaddling"
+                    },
+                    {
+                      "@id": "odta:Swimming"
+                    },
+                    {
+                      "@id": "odta:Tennis"
+                    },
+                    {
+                      "@id": "odta:Volleyball"
+                    },
+                    {
+                      "@id": "odta:WaterSports"
+                    },
+                    {
+                      "@id": "odta:Yoga"
+                    }
+                  ]
+                }
+              },
+              {
+                "ds:grammarNodeType": "RestrictedEnumerationWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#bnsOV",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedEnumeration",
+                  "sh:class": [
+                    "odta:TheaterEventEnumeration"
+                  ],
+                  "sh:in": [
+                    {
+                      "@id": "odta:Ballet"
+                    },
+                    {
+                      "@id": "odta:ChildrenTheater"
+                    },
+                    {
+                      "@id": "odta:Comedy"
+                    },
+                    {
+                      "@id": "odta:DanceTheater"
+                    },
+                    {
+                      "@id": "odta:Musical"
+                    },
+                    {
+                      "@id": "odta:MusicalTheater"
+                    },
+                    {
+                      "@id": "odta:OpenAirTheater"
+                    },
+                    {
+                      "@id": "odta:Opera"
+                    },
+                    {
+                      "@id": "odta:Operetta"
+                    },
+                    {
+                      "@id": "odta:TheaterFestival"
+                    },
+                    {
+                      "@id": "odta:VarietyShow"
+                    }
+                  ]
+                }
+              },
+              {
+                "ds:grammarNodeType": "RestrictedEnumerationWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#mZQkO",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedEnumeration",
+                  "sh:class": [
+                    "odta:SaleEventEnumeration"
+                  ],
+                  "sh:in": [
+                    {
+                      "@id": "odta:AdventMarket"
+                    },
+                    {
+                      "@id": "odta:ArtsAndCraftsFair"
+                    },
+                    {
+                      "@id": "odta:AutumnMarket"
+                    },
+                    {
+                      "@id": "odta:ChristmasMarket"
+                    },
+                    {
+                      "@id": "odta:EasterMarket"
+                    },
+                    {
+                      "@id": "odta:FarmersMarket"
+                    },
+                    {
+                      "@id": "odta:FleaMarket"
+                    },
+                    {
+                      "@id": "odta:HistoricalMarket"
+                    },
+                    {
+                      "@id": "odta:MedievalMarket"
+                    },
+                    {
+                      "@id": "odta:WeddingFair"
+                    },
+                    {
+                      "@id": "odta:RegionalMarket"
+                    },
+                    {
+                      "@id": "odta:ExhibitorsMarket"
+                    }
+                  ]
+                }
+              },
+              {
+                "ds:grammarNodeType": "RestrictedEnumerationWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#cXbMp",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedEnumeration",
+                  "sh:class": [
+                    "odta:FoodEventEnumeration"
+                  ],
+                  "sh:in": [
+                    {
+                      "@id": "odta:FoodMarket"
+                    },
+                    {
+                      "@id": "odta:LiteraryDinner"
+                    },
+                    {
+                      "@id": "odta:MusicalDinner"
+                    },
+                    {
+                      "@id": "odta:StreetFoodFestival"
+                    },
+                    {
+                      "@id": "odta:Tasting"
+                    },
+                    {
+                      "@id": "odta:Brunch"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:audience",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#ieXtq",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:Audience"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:name"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:description",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:string"
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:contributor",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#YPRBN",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:Organization"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:name"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#Bdrwg",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:Person"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:name"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "odta:donationLink",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:anyURI"
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:doorTime",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:time"
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:endDate",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:dateTime"
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:eventAttendanceMode",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "RestrictedEnumerationWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#dDekq",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedEnumeration",
+                  "sh:class": [
+                    "schema:EventAttendanceModeEnumeration"
+                  ],
+                  "sh:in": [
+                    {
+                      "@id": "schema:MixedEventAttendanceMode"
+                    },
+                    {
+                      "@id": "schema:OnlineEventAttendanceMode"
+                    },
+                    {
+                      "@id": "schema:OfflineEventAttendanceMode"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:eventSchedule",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#YqNYV",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:Schedule"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:name"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:eventStatus",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "RestrictedEnumerationWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#Ptuur",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedEnumeration",
+                  "sh:class": [
+                    "schema:EventStatusType"
+                  ],
+                  "sh:in": [
+                    {
+                      "@id": "schema:EventCancelled"
+                    },
+                    {
+                      "@id": "schema:EventScheduled"
+                    },
+                    {
+                      "@id": "schema:EventMovedOnline"
+                    },
+                    {
+                      "@id": "schema:EventRescheduled"
+                    },
+                    {
+                      "@id": "schema:EventPostponed"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:identifier",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#YCDGp",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:PropertyValue"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:name",
+                    "schema:value"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        }
+                      ]
+                    },
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:value",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:boolean"
+                        },
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        },
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:double"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:anyURI"
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:image",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:anyURI"
+              },
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#TlMnK",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:ImageObject"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:name"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:inLanguage",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:string"
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:isAccessibleForFree",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:boolean"
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:name",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:string"
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:organizer",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#Hbhpk",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:Organization"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:name"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#rqjLL",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:Person"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:name"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:performer",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#YxPAL",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:Person"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:name"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#SCxAC",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:Organization"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:name"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:potentialAction",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#FmPBN",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:Action"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:name"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:previousStartDate",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:date"
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:review",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#Harvl",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:Review"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:name"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:sameAs",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:anyURI"
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:sponsor",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#oLzOY",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:Person"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:name"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#alqUZ",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:Organization"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:name"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:startDate",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:dateTime"
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:subEvent",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#AUoLj",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:Event"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:name"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:superEvent",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#nhDAl",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:Event"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:name"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:typicalAgeRange",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:string"
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:url",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:anyURI"
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:about",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#MKMPK",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:Thing"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:name"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:subjectOf",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#uWYhk",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:CreativeWork"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:name"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:sdLicense",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:anyURI"
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:sdPublisher",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#yrotN",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:Organization"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:name"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "ds:grammarNodeType": "RestrictedClassWrap",
+                "sh:node": {
+                  "@id": "https://semantify.it/ds/PfgQEDjfBnhM#TUrLH",
+                  "@type": "sh:NodeShape",
+                  "ds:grammarNodeType": "RestrictedClass",
+                  "sh:class": [
+                    "schema:Person"
+                  ],
+                  "sh:closed": false,
+                  "ds:propertyDisplayOrder": [
+                    "schema:name"
+                  ],
+                  "sh:property": [
+                    {
+                      "@type": "sh:PropertyShape",
+                      "ds:grammarNodeType": "Property",
+                      "sh:path": "schema:name",
+                      "sh:minCount": 0,
+                      "sh:or": [
+                        {
+                          "ds:grammarNodeType": "DataType",
+                          "sh:datatype": "xsd:string"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "sh:PropertyShape",
+            "ds:grammarNodeType": "Property",
+            "sh:path": "schema:sdDatePublished",
+            "sh:minCount": 0,
+            "sh:or": [
+              {
+                "ds:grammarNodeType": "DataType",
+                "sh:datatype": "xsd:date"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
